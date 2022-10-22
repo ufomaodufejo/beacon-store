@@ -16,10 +16,11 @@ function BookClub() {
       </ul>
       <p>Meet the authors and our wonderful moderators hosting the book chats.</p>
       <div className='btn-div'>
-         <Link to="/book-club-registration-form">
+         <Link to="book-club-registration-form">
              <button className='btn' >JOIN HERE</button>
          </Link>
       </div>
+      
     </div>
   )
 }

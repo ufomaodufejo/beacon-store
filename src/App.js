@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, } from "react-router-dom";
 import "./App.css";
 import Header from "./Components/Header";
 import NavBar from "./Components/NavBar";
@@ -22,11 +22,15 @@ function App() {
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/book-club" element={<BookClub />}>
-          <Route path="/book-club-registration-form" element={<BookClubForm/>} />
+          <Route
+            path="/book-club-registration-form"
+            element={<BookClubForm />}
+          />
         </Route>
         <Route path="/gift-a-book" element={<Gifts />} />
         <Route path="/shop-now" element={<Shop />} />
       </Routes>
+
     </div>
   );
 }
