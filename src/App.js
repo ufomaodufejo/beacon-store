@@ -7,9 +7,11 @@ import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Careers from "./Components/Careers";
 import BookClub from "./Components/BookClub";
-import Gifts from "./Components/Gifts";
 import Shop from "./Components/Shop";
 import BookClubForm from "./Components/BookClubForm";
+import ErrorPage from "./Components/ErrorPage";
+import Users from "./Components/Users";
+import ErrorBoundary from "./Components/ErrorBoundary";
 
 function App() {
   return (
@@ -17,20 +19,21 @@ function App() {
       <Header />
       <NavBar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<About />} />
-        <Route path="/contact-us" element={<Contact />} />
-        <Route path="/careers" element={<Careers />} />
-        <Route path="/book-club" element={<BookClub />}>
+        <Route path="/" element={<Home />} errorElement={<ErrorBoundary />}/>
+        <Route path="/about-us" element={<About />} errorElement={<ErrorBoundary/>} />
+        <Route path="/contact-us" element={  <Contact /> } errorElement={<ErrorBoundary />}/>
+        <Route path="/careers" element={<Careers />} errorElement={<ErrorBoundary />}/>
+        <Route path="/book-club" element={<BookClub />} errorElement={<ErrorBoundary />}>
           <Route
             path="/book-club-registration-form"
             element={<BookClubForm />}
+            errorElement={<ErrorBoundary />}
           />
         </Route>
-        <Route path="/gift-a-book" element={<Gifts />} />
-        <Route path="/shop-now" element={<Shop />} />
+        <Route path="/shop-now" element={<Shop />} errorElement={<ErrorBoundary />}/>
+        <Route path="/members" element={<Users />} errorElement={<ErrorBoundary />}/>
+        <Route path="*" element={<ErrorPage />} errorElement={<ErrorBoundary />} />
       </Routes>
-
     </div>
   );
 }

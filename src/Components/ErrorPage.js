@@ -1,8 +1,18 @@
 import React from 'react'
+import error from "./assets/error.png"
 
 function ErrorPage() {
   return (
-    <div>ErrorPage</div>
+    <>
+    <div className='error'>
+      <img
+      src={error} alt = "Error 404"/>
+    </div>
+    <div className='error-text'>
+      <h1>PAGE NOT FOUND</h1>
+      <p>Please remain calm and go back to the previous page</p>
+    </div>
+    </>
   )
 }
 

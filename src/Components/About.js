@@ -3,7 +3,7 @@ import React from "react";
 function About() {
   return (
     <div className="about">
-      <h3>Dear readers,</h3>
+      <h3>Dear readers,</h3><br/>
 
       <p>
         We offer a tremendous gathering of books in the various classifications
@@ -13,7 +13,7 @@ function About() {
         references books proposed by various foundations as schedule the nation
         over. Other than this, we likewise offer an expansive gathering of
         E-Books at reasonable valuing.
-      </p>
+      </p><br/>
 
       <p>
         We endeavor to broaden consumer loyalty by providing food simple easy
@@ -29,7 +29,8 @@ function About() {
         to thank you for shopping with us. You can keep in touch with us for any
         new musings at thebeaconstore@gmail.com helping us to ad-lib for the
         peruser fulfillment
-      </p>
+      </p><br/>
+      <h3>Love, The Beacon Store</h3>
     </div>
   );
 }

@@ -20,11 +20,11 @@ function NavBar() {
         <Link to="/book-club">
           <li>Book Club</li>
         </Link>
-        <Link to="/gift-a-book">
-          <li>Gift-A-Book</li>
-        </Link>
         <Link to="/shop-now">
           <li>Shop Now</li>
+        </Link>
+        <Link to="/members">
+          <li>Members</li>
         </Link>
       </ul>
     </nav>
