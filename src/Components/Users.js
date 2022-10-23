@@ -28,7 +28,8 @@ function Users() {
 
   return (
     <>
-      <div style={{ display: "flex", flexWrap: "wrap", gap: 50 }}>
+      <h1 className="headers">Meet Our Members</h1>
+      <div className = "container">
         {members.length > 1 &&
           members.map((member) => (
             <MembersList member={member} key={member.login.uuid} />
