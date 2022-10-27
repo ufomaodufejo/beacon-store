@@ -1,3 +1,4 @@
+import { isDisabled } from "@testing-library/user-event/dist/utils";
 import React, { useEffect, useState } from "react";
 import MembersList from "./MembersList";
 
@@ -26,10 +27,19 @@ function Users() {
     return <div>Loading......</div>;
   }
 
+  function handlePrevious() {
+    if (page > 1) {
+      setPage((prev) => prev - 1);
+    } else {
+    }
+  }
+  function handleNext() {
+    setPage((prev) => prev + 1);
+  }
   return (
     <>
       <h1 className="headers">Meet Our Members</h1>
-      <div className = "container">
+      <div className="container">
         {members.length > 1 &&
           members.map((member) => (
             <MembersList member={member} key={member.login.uuid} />
@@ -37,24 +47,16 @@ function Users() {
       </div>
 
       <div className="btn-div">
-        <button className="btn"
-          onClick={() => {
-            if (page > 1) {
-              setPage((prev) => prev - 1);
-            } else {
-              alert("You're already on page 1!!!");
-            }
-          }}
-        >
-          Prev
-        </button>
-        <button className="btn"
-          onClick={() => {
-            setPage((prev) => prev + 1);
-          }}
-        >
-          Next
-        </button>
+        <div>
+          <button className="btn-one" onClick={handlePrevious}>
+            Prev
+          </button>
+        </div>
+        <div>
+          <button className="btn-one" onClick={handleNext}>
+            Next
+          </button>
+        </div>
       </div>
     </>
   );

@@ -14,9 +14,6 @@ function NavBar() {
         <Link to="/contact-us">
           <li>Contact Us</li>
         </Link>
-        <Link to="/careers">
-          <li>Careers</li>
-        </Link>
         <Link to="/book-club">
           <li>Book Club</li>
         </Link>

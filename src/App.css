@@ -1,7 +1,6 @@
 *{
     padding: 0;
     margin: 0;
-    background-color: rgb(247, 238, 189);
 }
 
 .main-container {
@@ -56,6 +55,113 @@ a {
   font-size: 20px;
 }
 
+
+.banner{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 20px;
+  border-radius: 10px;
+  background: black;
+}
+
+.banner-content{
+  margin-top: 60px;
+}
+
+.ban-img{
+  align-self: center;
+}
+.banner-content span{
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: white;
+}
+
+.banner-content h1{
+  margin-bottom: 10px;
+  font-size: 40px;
+  font-weight: 800;
+  color: goldenrod;
+  font-family: sans-serif;
+}
+
+.banner-content p{
+  margin-bottom: 40px;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: italic;
+  color: white;
+}
+
+.btn-one{
+  padding: 10px 30px;
+  background-color: goldenrod;
+  border: 2px solid goldenrod;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  font-style: italic;
+  color: #000;
+}
+
+.btn-one:hover{
+  background-color: #000;
+  border: 2px solid goldenrod;
+  color: goldenrod;
+}
+
+.column-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+
+.main-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: 600;
+  color:black;
+  font-family: sans-serif;
+  font-style: italic;
+}
+
+.card1{
+  background-color: black;
+  padding:4px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
+  width: 200px;
+  height: 300px;
+  border: 2px solid black;
+}
+
+.card1 p{
+  color: white;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.div{
+   margin-bottom: 20px;
+    height: 230px;
+    justify-content: center;
+    text-align: center;
+}
+
+.div img{
+  width: 100%;
+  align-self: center;
+  border-radius: 15px;
+}
+
 .bookclub, .about{
     margin: 20px;
     padding: 20px;
@@ -75,6 +181,7 @@ a {
     align-items: center;
     justify-content: center;
     margin-top: 30px;
+    gap: 20px;
 }
 .btn{
     text-align: center;
@@ -94,7 +201,9 @@ a {
    margin: 50px;
    display: flex;
    flex-wrap: wrap;
-   gap: 35px;
+   align-items: center;
+   justify-content: space-evenly;
+   gap: 10px;
    padding: 20px;
 }
 
@@ -106,43 +215,6 @@ a {
   display: flex;
   justify-content: center;
   font-family: 'Abril Fatface', cursive;
-}
-
-.card {
-  background-color: #f7f7f7;
-  padding: 30px;
-  margin: 20px 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
-  border-radius: 15px;
-  width: 200px;
-  height: 300px;
-  border: 2px solid black;
-}
-
-.card-image {
-  border-radius: 50%;
-  width: 215px;
-  height: 200px;
-}
-
-.card-text{
-  display: block;
-  border-radius: 8px;
-  margin: 10px;
-  width: 100%;
-}
-.card-name {
-  font-size: 19px;
-  font-weight: bold;
-  margin: 20px auto;
-  text-align: center;
-}
-
-.card-location{
-  font-size: 15px;
-  font-weight: 100;
-  margin: 20px auto;
-  text-align: center;
 }
 
 .error{
@@ -159,4 +231,33 @@ a {
     justify-content: center;
     margin: 20px;
     font-family: 'Abril Fatface', cursive;
+}
+.mainbox{
+  box-sizing: border-box;
+  width: 50%;
+  position: absolute;
+  left: 25%;
+  top: 35%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type=text],[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+textarea{
+  height: 150px;
+}
+.formbox{
+  border-radius: 5px;
+  background-color: black;
+  padding: 20px;
+  color: white;
 }

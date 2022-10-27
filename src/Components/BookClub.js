@@ -17,7 +17,7 @@ function BookClub() {
       <p>Meet the authors and our wonderful moderators hosting the book chats.</p>
       <div className='btn-div'>
          <Link to="book-club-registration-form">
-             <button className='btn' >JOIN HERE</button>
+             <button className='btn-one' >JOIN HERE</button>
          </Link>
       </div>
       
