@@ -86,7 +86,7 @@ const Shop = () => {
             title="The Days of silence"
             value="4.5"
             oldprice="#5,000.00"
-            newprice="$4,500.00"
+            newprice="#4,500.00"
           />
 
           <Card

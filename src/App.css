@@ -7,6 +7,12 @@
   margin: 20px;
 }
 
+@media screen and (min-width: 420px){
+  .main-container{
+    width: 100%;
+  }
+}
+
 .header {
   text-align: center;
   margin: 10px;
@@ -197,6 +203,11 @@ a {
   color: #000;
 }
 
+.bton:disabled{
+  background: #dddddd;
+  border: none;
+}
+
 .container{
    margin: 50px;
    display: flex;
@@ -238,6 +249,14 @@ a {
   position: absolute;
   left: 25%;
   top: 35%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.main-box{
+  box-sizing: border-box;
+  width: 50%;
+  position: relative;
   font-family: Arial, Helvetica, sans-serif;
 }
 

@@ -1,9 +1,11 @@
+import { fabClasses } from "@mui/material";
 import { isDisabled } from "@testing-library/user-event/dist/utils";
 import React, { useEffect, useState } from "react";
 import MembersList from "./MembersList";
 
 function Users() {
   const [members, setMembers] = useState([]);
+  const [disable, setDisable] = useState(false)
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
 
@@ -28,14 +30,17 @@ function Users() {
   }
 
   function handlePrevious() {
-    if (page > 1) {
+    if (page >= 2) {
       setPage((prev) => prev - 1);
+      setDisable(false)
     } else {
+      setDisable(true)
     }
   }
   function handleNext() {
     setPage((prev) => prev + 1);
   }
+  console.log(page)
   return (
     <>
       <h1 className="headers">Meet Our Members</h1>
@@ -48,7 +53,7 @@ function Users() {
 
       <div className="btn-div">
         <div>
-          <button className="btn-one" onClick={handlePrevious}>
+        <button disabled={disable} className="btn-one bton" onClick={handlePrevious}>
             Prev
           </button>
         </div>
