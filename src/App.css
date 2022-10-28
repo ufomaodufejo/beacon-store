@@ -7,11 +7,6 @@
   margin: 20px;
 }
 
-@media screen and (min-width: 420px){
-  .main-container{
-    width: 100%;
-  }
-}
 
 .header {
   text-align: center;
