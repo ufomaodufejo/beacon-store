@@ -1,12 +1,12 @@
-import React from 'react';
-import Paper from '@mui/material/Paper';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Unstable_Grid2';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import { ShoppingCart } from '@mui/icons-material';
-import { Button } from '@mui/material';
-import Rating from '@mui/material/Rating';
+import React from "react";
+import Paper from "@mui/material/Paper";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Unstable_Grid2";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import { ShoppingCart } from "@mui/icons-material";
+import { Button } from "@mui/material";
+import Rating from "@mui/material/Rating";
 import shop1 from "./assets/shop1.png";
 import shop2 from "./assets/shop2.png";
 import shop3 from "./assets/shop3.png";
@@ -15,29 +15,35 @@ import shop5 from "./assets/shop5.jpg";
 import shop6 from "./assets/shop6.jpg";
 
 const imgStyle = {
-  width: '100%',
-  maxHeight: '14rem',
+  width: "100%",
+  maxHeight: "14rem",
 };
 
 function Card(props) {
   return (
-    <Grid item xs={4}>
+    <Grid item xs={12} sm={6} lg={4}>
       <Paper elevation={6} sx={{ maxHeight: 380, marginBottom: 0 }}>
         <Typography variant="body2" component="h3" noWrap="true" color="grey">
-            {props.genre}
-          </Typography>
+          {props.genre}
+        </Typography>
         <img src={props.img} alt="" style={imgStyle} />
         <Box paddingX={2}>
           <Typography variant="body2" component="h3" noWrap="true">
             {props.title}
           </Typography>
           <Box>
-            <Rating name="read-only" value={props.value} readOnly precision={0.5} size="small" />
+            <Rating
+              name="read-only"
+              value={props.value}
+              readOnly
+              precision={0.5}
+              size="small"
+            />
           </Box>
           <Box>
             <Typography
               variant="caption"
-              sx={{ textDecoration: 'line-through' }}
+              sx={{ textDecoration: "line-through" }}
             >
               {props.oldprice}
             </Typography>
@@ -47,13 +53,13 @@ function Card(props) {
           </Box>
         </Box>
       </Paper>
-      <Paper elevation={6} sx={{marginTop: 0}}>
+
+      <Paper elevation={6} sx={{ marginTop: 0 }}>
         <Box
-          sx={{ display: 'flex', alignItems: 'center', gap: '50px' }}
+          sx={{ display: "flex", alignItems: "center", gap: "50px" }}
           paddingY={2}
         >
-          <Box marginLeft={2}>
-          </Box>
+          <Box marginLeft={2}></Box>
           <Box>
             <Button variant="contained" color="error">
               <ShoppingCart />
@@ -72,7 +78,7 @@ const Shop = () => {
       <Container maxWidth="md">
         <Grid container spacing={5}>
           <Card
-           genre ="FICTION"
+            genre="FICTION"
             img={shop1}
             title="A conspiracy of Ravens"
             value="4"
@@ -81,7 +87,7 @@ const Shop = () => {
           />
 
           <Card
-            genre ="FICTION"
+            genre="FICTION"
             img={shop2}
             title="The Days of silence"
             value="4.5"
@@ -90,7 +96,7 @@ const Shop = () => {
           />
 
           <Card
-          genre="AUTOBIOGRAPHY"
+            genre="AUTOBIOGRAPHY"
             img={shop3}
             title="Alajoota"
             value="4.5"

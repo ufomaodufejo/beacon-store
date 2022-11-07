@@ -6,6 +6,7 @@ import book2 from "./assets/book2.jpg";
 import book3 from "./assets/book3.jpg";
 import book4 from "./assets/book4.jpg";
 import book5 from "./assets/book5.jpg";
+import book6 from "./assets/book6.jpg";
 import bookclub from "./assets/bookclub.png";
 
 function Home() {
@@ -25,9 +26,11 @@ function Home() {
           </Link>
         </div>
       </div>
+
       <div className="main-section">
          <h1>BEST SELLERS</h1>
       </div>
+
       <section className="column-section">
         <article className="card1">
           <div className="div">
@@ -67,6 +70,14 @@ function Home() {
           </div>
           <p>Braiding Sweetgrass</p>
           <p>Author: Robin Kimmerer</p>
+        </article>
+
+        <article className="card1">
+          <div className="div">
+            <img src={book6} alt=""/>
+          </div>
+          <p>Diary of a wimpy kid</p>
+          <p>Author: Jeff Kinney</p>
         </article>
       </section>
 
